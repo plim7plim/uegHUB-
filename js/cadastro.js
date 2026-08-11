@@ -338,6 +338,12 @@ form.addEventListener(
             );
 
 
+        const hobbies =
+            getSelectedValues(
+                "hobbies"
+            );
+
+
         const naoGosta =
             getSelectedValues(
                 "dislikes"
@@ -425,6 +431,9 @@ form.addEventListener(
                     tecnologias:
                         tecnologias,
 
+                    hobbies:
+                        hobbies,
+
                     naoGosta:
                         naoGosta,
 
@@ -457,10 +466,13 @@ form.addEventListener(
                 "Perfil criado";
 
 
+            console.log("⏳ Redirecionando em 1s...");
+
             setTimeout(() => {
 
-                window.location.href =
-                    "feed.html";
+                console.log("➡️ Executando redirect agora");
+
+                window.location.href = "feed.html";
 
             }, 1000);
 

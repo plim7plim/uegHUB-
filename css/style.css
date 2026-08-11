@@ -487,3 +487,6 @@ footer {
     padding-bottom: 18px;
   }
 }
+.form-message.success-message {
+  color: var(--success);
+}
