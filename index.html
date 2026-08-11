@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UEG Hub — comunidade de estudantes de tecnologia.">
+  <title>UEG Hub | Login</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="UEG Hub - início">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>UEG <strong>HUB</strong></span>
+    </a>
+
+    <span class="status">
+      <span class="status-dot"></span>
+      Comunidade tech
+    </span>
+  </header>
+
+  <main class="auth-layout">
+    <section class="hero-copy">
+      <span class="eyebrow">UEG // TECHNOLOGY COMMUNITY</span>
+
+      <h1>
+        Conecte.
+        <span>Compartilhe.</span>
+        Construa.
+      </h1>
+
+      <p>
+        Um espaço para estudantes de tecnologia da UEG
+        encontrarem pessoas, interesses, projetos e novas ideias.
+      </p>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <small>ueg-hub.sh</small>
+        </div>
+
+        <div class="terminal-body">
+          <p><span class="code-muted">$</span> connect --community</p>
+          <p class="success">✓ comunidade encontrada</p>
+          <p><span class="code-muted">$</span> find --developers</p>
+          <p class="success">✓ pessoas prontas para criar</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-card" aria-labelledby="login-title">
+      <div class="card-header">
+        <span class="mini-icon">◈</span>
+        <div>
+          <span class="card-kicker">ACESSO</span>
+          <h2 id="login-title">Bem-vindo de volta</h2>
+        </div>
+      </div>
+
+      <p class="card-description">
+        Entre para acessar a comunidade do seu polo.
+      </p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="seu@email.com"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <div class="label-row">
+            <label for="password">Senha</label>
+            <a href="#" id="forgotPassword">Esqueci minha senha</a>
+          </div>
+
+          <div class="password-wrap">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="••••••••"
+              required
+              minlength="6"
+            >
+            <button type="button" id="togglePassword" aria-label="Mostrar senha">◉</button>
+          </div>
+        </div>
+
+        <p id="loginMessage" class="form-message" role="alert"></p>
+
+        <button class="primary-button" type="submit">
+          <span>Entrar no UEG Hub</span>
+          <span>→</span>
+        </button>
+      </form>
+
+      <div class="divider"><span>OU</span></div>
+
+      <p class="register-text">
+        Ainda não possui uma conta?
+        <a href="cadastro.html">Criar meu perfil</a>
+      </p>
+
+      <p class="security-note">
+        🔒 Seus dados são protegidos pelas regras de segurança do Firebase.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>UEG HUB</span>
+    <span>build 0.1 • comunidade em construção</span>
+  </footer>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

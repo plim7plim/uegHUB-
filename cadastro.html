@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crie seu perfil no UEG Hub.">
+  <title>UEG Hub | Criar perfil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="UEG Hub - início">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>UEG <strong>HUB</strong></span>
+    </a>
+
+    <span class="status">
+      <span class="status-dot"></span>
+      Criando seu perfil
+    </span>
+  </header>
+
+  <main class="register-page">
+    <section class="register-intro">
+      <span class="eyebrow">UEG // CREATE PROFILE</span>
+      <h1>Monte seu <span>perfil tech.</span></h1>
+      <p>
+        Conte para a comunidade quem você é, o que gosta de estudar
+        e quais tecnologias fazem parte da sua jornada.
+      </p>
+
+      <div class="progress-box">
+        <div class="progress-top">
+          <span id="stepLabel">ETAPA 1 DE 3</span>
+          <span id="progressPercent">33%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="register-card">
+      <form id="registerForm" novalidate>
+
+        <!-- ETAPA 1 -->
+        <div class="step active" data-step="1">
+          <div class="step-heading">
+            <span class="step-number">01</span>
+            <div>
+              <span class="card-kicker">CONTA</span>
+              <h2>Comece por aqui</h2>
+            </div>
+          </div>
+
+          <p class="card-description">
+            Esses dados serão usados para criar sua conta no UEG Hub.
+          </p>
+
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="Como podemos te chamar?" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="emailCadastro">E-mail</label>
+            <input id="emailCadastro" type="email" placeholder="seu@email.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="senhaCadastro">Senha</label>
+            <div class="password-wrap">
+              <input id="senhaCadastro" type="password" placeholder="Mínimo de 6 caracteres" autocomplete="new-password" minlength="6" required>
+              <button type="button" id="toggleRegisterPassword" aria-label="Mostrar senha">◉</button>
+            </div>
+          </div>
+
+          <button type="button" class="primary-button next-button">
+            <span>Continuar</span><span>→</span>
+          </button>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="step" data-step="2">
+          <div class="step-heading">
+            <span class="step-number">02</span>
+            <div>
+              <span class="card-kicker">SOBRE VOCÊ</span>
+              <h2>Agora, seu perfil</h2>
+            </div>
+          </div>
+
+          <p class="card-description">
+            Ajude a galera a entender onde você está na sua jornada.
+          </p>
+
+          <div class="two-columns">
+            <div class="field">
+              <label for="curso">Curso</label>
+              <select id="curso" required>
+                <option value="">Selecione</option>
+                <option>Sistemas para Internet</option>
+                <option>Engenharia de Software</option>
+                <option>Ciência da Computação</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="periodo">Período</label>
+              <select id="periodo" required>
+                <option value="">Selecione</option>
+                <option value="1">1º</option>
+                <option value="2">2º</option>
+                <option value="3">3º</option>
+                <option value="4">4º</option>
+                <option value="5">5º</option>
+                <option value="6">6º</option>
+                <option value="7">7º</option>
+                <option value="8">8º</option>
+                <option value="9">9º</option>
+                <option value="10">10º</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bio">Bio</label>
+            <textarea id="bio" maxlength="180" placeholder="Ex.: Curioso por back-end, cloud e tudo que envolve tecnologia."></textarea>
+            <small><span id="bioCount">0</span>/180</small>
+          </div>
+
+          <div class="field">
+            <label for="github">GitHub <span class="optional">(opcional)</span></label>
+            <input id="github" type="url" placeholder="https://github.com/seuusuario">
+          </div>
+
+          <div class="field">
+            <label for="linkedin">LinkedIn <span class="optional">(opcional)</span></label>
+            <input id="linkedin" type="url" placeholder="https://linkedin.com/in/seuusuario">
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="secondary-button prev-button">← Voltar</button>
+            <button type="button" class="primary-button next-button"><span>Continuar</span><span>→</span></button>
+          </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="step" data-step="3">
+          <div class="step-heading">
+            <span class="step-number">03</span>
+            <div>
+              <span class="card-kicker">TECNOLOGIA</span>
+              <h2>O que você curte?</h2>
+            </div>
+          </div>
+
+          <p class="card-description">
+            Selecione suas tecnologias e áreas de interesse. Você poderá alterar isso depois.
+          </p>
+
+          <div class="choice-section">
+            <div class="choice-title">
+              <label>Tecnologias</label>
+              <span>Escolha quantas quiser</span>
+            </div>
+            <div class="choices" id="technologies">
+              <button type="button" class="choice" data-value="Java">Java</button>
+              <button type="button" class="choice" data-value="JavaScript">JavaScript</button>
+              <button type="button" class="choice" data-value="Python">Python</button>
+              <button type="button" class="choice" data-value="C#">C#</button>
+              <button type="button" class="choice" data-value="HTML/CSS">HTML/CSS</button>
+              <button type="button" class="choice" data-value="React">React</button>
+              <button type="button" class="choice" data-value="SQL">SQL</button>
+              <button type="button" class="choice" data-value="Firebase">Firebase</button>
+              <button type="button" class="choice" data-value="AWS">AWS</button>
+              <button type="button" class="choice" data-value="Docker">Docker</button>
+              <button type="button" class="choice" data-value="Git">Git</button>
+              <button type="button" class="choice" data-value="Linux">Linux</button>
+            </div>
+          </div>
+
+          <div class="choice-section">
+            <div class="choice-title">
+              <label>Áreas de interesse</label>
+              <span>Encontre pessoas parecidas com você</span>
+            </div>
+            <div class="choices" id="interests">
+              <button type="button" class="choice" data-value="Back-end">Back-end</button>
+              <button type="button" class="choice" data-value="Front-end">Front-end</button>
+              <button type="button" class="choice" data-value="Mobile">Mobile</button>
+              <button type="button" class="choice" data-value="Cloud">Cloud</button>
+              <button type="button" class="choice" data-value="DevOps">DevOps</button>
+              <button type="button" class="choice" data-value="IA">IA</button>
+              <button type="button" class="choice" data-value="Redes">Redes</button>
+              <button type="button" class="choice" data-value="Segurança">Segurança</button>
+              <button type="button" class="choice" data-value="Banco de Dados">Banco de Dados</button>
+              <button type="button" class="choice" data-value="Games">Games</button>
+            </div>
+          </div>
+
+          <div class="choice-section">
+            <div class="choice-title">
+              <label>O que você não curte?</label>
+              <span>Sem julgamentos 😂</span>
+            </div>
+            <div class="choices" id="dislikes">
+              <button type="button" class="choice" data-value="Front-end">Front-end</button>
+              <button type="button" class="choice" data-value="Back-end">Back-end</button>
+              <button type="button" class="choice" data-value="Redes">Redes</button>
+              <button type="button" class="choice" data-value="Banco de Dados">Banco de Dados</button>
+              <button type="button" class="choice" data-value="Documentação">Documentação</button>
+              <button type="button" class="choice" data-value="CSS">CSS 😂</button>
+            </div>
+          </div>
+
+          <p id="registerMessage" class="form-message"></p>
+
+          <div class="button-row">
+            <button type="button" class="secondary-button prev-button">← Voltar</button>
+            <button type="submit" class="primary-button">
+              <span id="submitText">Criar meu perfil 🚀</span><span>→</span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="login-link">
+        Já possui uma conta? <a href="index.html">Entrar</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/cadastro.js"></script>
+</body>
+</html>
